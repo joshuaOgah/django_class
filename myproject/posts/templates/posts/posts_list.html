@@ -1,0 +1,25 @@
+<!-- prettier-ignore -->
+
+{% extends 'layout.html' %} 
+
+{% block title %}
+ Posts List
+{% endblock %} 
+
+{% block content %}
+<section>
+  <h1>My Posts</h1>
+  {% for post in posts %}
+  <article>
+    <h2>
+      <!-- prettier-ignore -->
+      <a href="{% url 'posts:page' slug=post.slug %}"> 
+        {{ post.title }}
+      </a>
+    </h2>
+    <p>{{post.date}}</p>
+    <p>{{post.body}}</p>
+  </article>
+  {% endfor %}
+</section>
+{% endblock %}
