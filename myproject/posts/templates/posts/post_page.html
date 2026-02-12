@@ -8,7 +8,9 @@
 
 {% block content %}
 <section>
-  <img class="" src="{{post.banner.url}}" alt="{{post.title}}" />
+  <div class="img-container">
+    <img class="img" src="{{post.banner.url}}" alt="{{post.title}}" />
+  </div>
   <h1>{{ post.title }}</h1>
   <p>{{post.date}}</p>
   <p>{{post.body}}</p>
