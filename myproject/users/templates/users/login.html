@@ -3,17 +3,19 @@
 {% extends 'layout.html' %} 
 
 {% block title %}
- Register New User
+ Login
 {% endblock %} 
 
 {% block content %}
 <section>
-  <h1>Register a New User</h1>
-  <form class="form-with-validation" action="users/register/" method="POST">
+  <h1>Login</h1>
+  {% comment %}
+  <form class="form-with-validation" action="users/login/" method="POST">
     <!-- prettier-ignore -->
     {% csrf_token %} 
     {{form}}
     <button class="form-submit">Submit</button>
   </form>
+  {% endcomment %}
 </section>
 {% endblock %}
